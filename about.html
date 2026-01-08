@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pet Hotels</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">
+                <span class="contact-item">
+                    Call us: <strong>747-800-9880</strong>
+                </span>
+
+            </div>
+            <div class="top-bar-right">
+                <span class="follow-label">Follow :</span>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+        <div class="container header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/image.png" alt="Pet Clinic Logo">
+                </a>
+            </div>
+
+            <!-- Mobile Menu -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span><i class="fas fa-bars"></i></span>
+            </label>
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><span>Home</span></a></li>
+                    <li><a href="about.html" class="active"><span>About Us</span></a></li>
+                    <li><a href="#"><span>Boarding</span></a></li>
+                    <li><a href="#"><span>Veterinary Care</span></a></li>
+                    <li><a href="#"><span>Grooming</span></a></li>
+                    <li><a href="#"><span>Day Care</span></a></li>
+                    <li><a href="#"><span>Training</span></a></li>
+                    <li><a href="about.html#gallery"><span>Gallery</span></a></li>
+                    <li><a href="#"><span>Contact Us</span></a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </div>
+</header>
+
+<!-- 1. HERO SECTION (Warm & Trustworthy) -->
+<section class="page-hero creative-hero">
+    <div class="container hero-content">
+        <h1 class="hero-title-large">Because Leaving Your Pet Should Never Feel Like a Worry.</h1>
+        <p class="hero-subtext">Love. Care. Trust. A second home where tails never stop wagging.</p>
+        <div class="hero-underline"><i class="fas fa-paw"></i></div>
+    </div>
+</section>
+
+<!-- 2. WHO WE ARE (Classic Overlapping Circles) -->
+<section class="classic-about-section">
+    <div class="container">
+        <div class="row-flex align-center gap-50">
+            <!-- Left: Text Content -->
+            <div class="col-half text-left classic-about-text">
+                 <h2 class="title-with-paw">About Us</h2>
+                 <h3>Where Comfort Meets Care</h3>
+                 <p>At PetsHotel, we believe every pet deserves a vacation as relaxing as yours. Our facility is designed to provide a safe, hygienic, and loving environment where your furry friends feel right at home.</p>
+                 <p>We strictly prioritize safety, hygiene, and comfort. Whether it's a cozy nap in our climate-controlled boarding suites or social playtime under careful supervision, your pet's happiness is our obsession.</p>
+                 <a href="#" class="btn-primary" style="border-radius:30px; padding: 12px 35px; font-weight:700;">CONTACT US</a>
+            </div>
+
+            <!-- Right: Overlapping Circular Images -->
+            <div class="col-half">
+                <div class="images-overlap-wrapper">
+                    <!-- Big Circle (Main Image) -->
+                    <div class="img-big-circle">
+                         <img src="./assets/gallery/WhatsApp Image 2026-01-07 at 14.38.22.jpeg" alt="Caring Staff">
+                    </div>
+                    <!-- Small Circle (Detail/Facility) -->
+                    <div class="img-small-circle">
+                         <img src="./assets/gallery/WhatsApp Image 2026-01-07 at 14.38.26.jpeg" alt="Pet Facility">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Wave Bottom (Cream to Light) -->
+    <div class="wave-divider wave-bottom">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill fill-light"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- 3. OUR STORY (Timeline Style) -->
+<section class="section-padding bg-light story-timeline-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="title-with-paw">Our Story</h2>
+            <p>From a simple belief to a trusted community.</p>
+        </div>
+        
+        <div class="timeline-container">
+            <!-- Step 1 -->
+            <div class="timeline-step">
+                <div class="step-icon"><i class="fas fa-question"></i></div>
+                <h3>The Problem</h3>
+                <p>We realized that no pet parent should ever spend their trip worrying about their pet back home.</p>
+            </div>
+            <!-- Arrow Removed (Replaced by CSS Line) -->
+            
+            <!-- Step 2 -->
+            <div class="timeline-step">
+                <div class="step-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>The Idea</h3>
+                <p>To create a "second home" built on empathy, where safety and love are the only rules.</p>
+            </div>
+            <!-- Arrow Removed -->
+
+            <!-- Step 3 -->
+            <div class="timeline-step">
+                <div class="step-icon"><i class="fas fa-home"></i></div>
+                <h3>The Result</h3>
+                <p>A happy community where hundreds of pets are loved, protected, and cared for daily.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Wave Bottom (Light to White / Values) -->
+    <div class="wave-divider wave-bottom">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill fill-white"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- 4. VALUES (Enhanced Cards) -->
+<section class="section-padding bg-white">
+    <div class="container">
+         <div class="section-header text-center">
+            <h2 class="title-with-paw">What We Stand For</h2>
+        </div>
+        
+        <div class="values-grid-creative">
+            <!-- Value 1 -->
+            <div class="value-card hover-lift">
+                <div class="value-icon-circle"><i class="fas fa-heart"></i></div>
+                <h4>Love & Empathy</h4>
+                <p>Every pet is treated as our own, with patience and compassion.</p>
+            </div>
+            <!-- Value 2 -->
+            <div class="value-card hover-lift">
+                <div class="value-icon-circle"><i class="fas fa-shield-alt"></i></div>
+                <h4>Safety First</h4>
+                <p>Secure facilities, monitored spaces, and strict safety protocols.</p>
+            </div>
+             <!-- Value 3 -->
+            <div class="value-card hover-lift">
+                <div class="value-icon-circle"><i class="fas fa-pump-medical"></i></div>
+                <h4>Hygiene</h4>
+                <p>Clean, sanitized, and healthy environments at all times.</p>
+            </div>
+             <!-- Value 4 -->
+            <div class="value-card hover-lift">
+                <div class="value-icon-circle"><i class="fas fa-search"></i></div>
+                <h4>Transparency</h4>
+                <p>Honest communication with regular updates for pet parents.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Wave Bottom (White to Light / Trust) -->
+     <div class="wave-divider wave-bottom">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill fill-light"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- 5. WHY TRUST US (Visual Grid) -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="title-with-paw">Why Pet Parents Trust Us</h2>
+        </div>
+         <div class="trust-grid">
+             <!-- Card -->
+             <div class="trust-card">
+                 <i class="fas fa-home trust-icon"></i>
+                 <h4>Home-Like Environment</h4>
+                 <p>Cozy spaces that help pets settle in naturally.</p>
+             </div>
+             <!-- Card -->
+             <div class="trust-card">
+                 <i class="fas fa-user-nurse trust-icon"></i>
+                 <h4>Trained & Caring Staff</h4>
+                 <p>Passionate caregivers trained in behavior.</p>
+             </div>
+             <!-- Card -->
+             <div class="trust-card">
+                 <i class="fas fa-pump-soap trust-icon"></i>
+                 <h4>Strict Hygiene</h4>
+                 <p>Medical-grade cleaning practices.</p>
+             </div>
+             <!-- Card -->
+             <div class="trust-card">
+                 <i class="fas fa-camera trust-icon"></i>
+                 <h4>Regular Updates</h4>
+                 <p>Photos/videos to stay connected.</p>
+             </div>
+             <!-- Card -->
+             <div class="trust-card">
+                 <i class="fas fa-tree trust-icon"></i>
+                 <h4>Spacious Play</h4>
+                 <p>Safe zones for fun and socialization.</p>
+             </div>
+             <!-- Card -->
+             <div class="trust-card">
+                 <i class="fas fa-briefcase-medical trust-icon"></i>
+                 <h4>Vet Support 24/7</h4>
+                 <p>Access to veterinary care when needed.</p>
+             </div>
+         </div>
+    </div>
+</section>
+
+<!-- 6. GALLERY SECTION (Real Moments) -->
+<section class="gallery-section" id="gallery">
+    <div class="container text-center">
+        <div class="section-header">
+            <h2 class="title-with-paw">Gallery</h2>
+            <p>Real moments. Real pets. Real happiness.</p>
+        </div>
+        <div class="gallery-grid">
+             <!-- Image 1 -->
+             <div class="gallery-item">
+                 <img src="assets/gallery/WhatsApp Image 2026-01-07 at 14.38.28.jpeg" alt="Happy Pet Playing" loading="lazy">
+             </div>
+             <!-- Image 2 -->
+             <div class="gallery-item">
+                 <img src="assets/gallery/WhatsApp Image 2026-01-07 at 14.38.49.jpeg" alt="Pet Boarding Moment" loading="lazy">
+             </div>
+             <!-- Image 3 -->
+             <div class="gallery-item">
+                 <img src="assets/gallery/WhatsApp Image 2026-01-07 at 14.38.48.jpeg" alt="Cuddles and Care" loading="lazy">
+             </div>
+              <!-- Image 4 -->
+             <div class="gallery-item">
+                 <img src="assets/gallery/WhatsApp Image 2026-01-07 at 14.38.51.jpeg" alt="Friends at PetHotel" loading="lazy">
+             </div>
+        </div>
+    </div>
+</section>
+
+<!-- 7. EMOTIONAL IMAGE DIVIDER -->
+<section class="emotional-divider" style="background-image: url('assets/gallery/WhatsApp Image 2026-01-07 at 14.38.40.jpeg');">
+    <div class="divider-overlay">
+        <h3>“Every wag, every nap, every cuddle — handled with care.”</h3>
+    </div>
+</section>
+
+<!-- 8. CTA SECTION (Refined) -->
+<section class="join-us-section">
+    <div class="container join-container">
+        <!-- Text Card -->
+        <div class="join-card refined-cta">
+            <h2>Ready to Give Your Pet the Care They Deserve?</h2>
+            <p>Whether it’s boarding, grooming, or day care, we’re here to make sure your pet feels safe, loved, and happy.</p>
+            <a href="#" class="btn-primary" style="margin-top: 20px;">CONTACT US</a>
+        </div>
+        
+        <!-- Dog Image -->
+        <div class="join-bulldog-container">
+            <img src="assets/join_frenchie.png" alt="Happy French Bulldog" class="join-bulldog">
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & About -->
+                <div class="footer-col brand-col">
+                    <img src="assets/logo-removebg-preview.png" alt="PetsHotel Logo" class="footer-logo-img" style="height: 200px;">
+                   
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col links-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Our Services -->
+                <div class="footer-col services-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">Pet Boarding</a></li>
+                        <li><a href="#">Pet Grooming</a></li>
+                        <li><a href="#">Dog Training</a></li>
+                        <li><a href="#">Veterinary Care</a></li>
+                        <li><a href="#">Day Care</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="footer-col contact-col">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Pet Street, Happy Tails City, KA 560001</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 747-800-9880</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@petshotel.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <p>&copy; 2024 PetsHotel. All Rights Reserved. | Made With ❤️  by <a href="https://iflorainfo.com/" target="_blank" style="color: #E63946;">IIPL</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Stats Counter Animation ---
+        const statsSection = document.querySelector('.stats-section');
+        const statNumbers = document.querySelectorAll('.stat-number');
+        let started = false; 
+
+        if (statsSection && statNumbers.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !started) {
+                        started = true;
+                        statNumbers.forEach(num => startCount(num));
+                    }
+                });
+            }, { threshold: 0.5 }); 
+
+            observer.observe(statsSection);
+        }
+
+        function startCount(el) {
+            const target = +el.getAttribute('data-target');
+            const duration = 2000; 
+            const stepTime = 50; 
+            const steps = duration / stepTime;
+            const increment = target / steps;
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    el.innerText = target + (el.innerText.includes('%') ? '%' : '+'); 
+                    clearInterval(timer);
+                } else {
+                    el.innerText = Math.ceil(current) + (el.innerText.includes('%') ? '%' : '+');
+                }
+            }, stepTime);
+        }
+    });
+</script>
+
+</body>
+</html>

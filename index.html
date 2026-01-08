@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Hotels</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="site-header">
+
+
+    <!-- Top Utility Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">
+                <span class="contact-item">
+                    Call us: <strong>747-800-9880</strong>
+                </span>
+
+            </div>
+            <div class="top-bar-right">
+                <span class="follow-label">Follow :</span>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+        <div class="container header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#">
+                    <!-- Preserving user's image.png -->
+                    <img src="assets/image.png" alt="Pet Clinic Logo">
+                </a>
+            </div>
+
+            <!-- Mobile Menu -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span><i class="fas fa-bars"></i></span>
+            </label>
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active"><span>Home</span></a></li>
+                    <li><a href="about.html"><span>About Us</span></a></li>
+                    <li><a href="#"><span>Boarding</span></a></li>
+                    <li><a href="#"><span>Veterinary Care</span></a></li>
+                    <li><a href="#"><span>Grooming</span></a></li>
+                    <li><a href="#"><span>Day Care</span></a></li>
+                    <li><a href="#"><span>Training</span></a></li>
+                    <li><a href="about.html#gallery"><span>Gallery</span></a></li>
+                    <li><a href="#"><span>Contact Us</span></a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </div>
+</header>
+
+<!-- Hero Slider Section -->
+<section class="hero-slider">
+    <!-- Slide 1: Day Care -->
+    <div class="slide slide-1 active">
+        <div class="slide-bg"></div>
+        <div class="container slide-content">
+            <h1>A Home Away From Home for Your Pet</h1>
+            <p>Loving care, safe spaces, and familiar comfort every day.</p>
+            <a href="#" class="btn-slider">Book a Visit</a>
+        </div>
+    </div>
+
+    <!-- Slide 2: Boarding -->
+    <div class="slide slide-2">
+        <div class="slide-bg"></div>
+        <div class="container slide-content">
+            <h1>Comfortable Boarding You Can Trust</h1>
+            <p>Clean, ventilated spaces designed for your pet’s comfort.</p>
+            <a href="#" class="btn-slider">View Boarding Services</a>
+        </div>
+    </div>
+
+    <!-- Slide 3: Grooming -->
+    <div class="slide slide-3">
+        <div class="slide-bg"></div>
+        <div class="container slide-content">
+            <h1>Gentle Grooming with Love & Care</h1>
+            <p>Calm handling, hygienic space, and stress-free grooming.</p>
+            <a href="#" class="btn-slider">Book Grooming</a>
+        </div>
+    </div>
+
+    <!-- Slide 4: Trust & Care -->
+    <div class="slide slide-4">
+        <div class="slide-bg"></div>
+        <div class="container slide-content">
+            <h1>Because Your Pet Is Family</h1>
+            <p>Experienced staff who treat every pet like their own.</p>
+            <a href="#" class="btn-slider">Book an Appointment</a>
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="slider-arrow prev" id="prevSlide">
+        <!-- Hand-drawn style curved arrow left -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12c-6-1-11-0.5-15 0"/>
+            <path d="M4 12l6-5"/>
+            <path d="M4 12l6 5"/>
+        </svg>
+    </button>
+    <button class="slider-arrow next" id="nextSlide">
+        <!-- Hand-drawn style curved arrow right -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12c6-1 11-0.5 15 0"/>
+            <path d="M20 12l-6-5"/>
+            <path d="M20 12l-6 5"/>
+        </svg>
+
+    </button>
+</section>
+
+
+<!-- Services Overview Section -->
+<section class="services-section">
+    <div class="hero-bg-pattern"></div>
+    <div class="container">
+        <div class="section-header">
+            <h2 class="title-with-paw"><span>Our</span> Services</h2>
+            <p>Everything your pet needs, under one roof.</p>
+        </div>
+
+        <!-- Intro Content Row -->
+        <div class="services-intro">
+            <div class="intro-text">
+                <h3>High Quality Services</h3>
+                <p>We provide a safe, clean, and caring environment for pets while you’re away. From comfortable boarding and engaging day care to gentle grooming and basic veterinary support, every service is designed to keep your pet happy, healthy, and stress-free.</p>
+                <p>Our team ensures personal attention, hygiene, and supervision so your pet feels at home — not in a kennel.</p>
+            </div>
+            <div class="intro-image">
+                <img src="./assets/slider_img/image_copy-removebg-preview.png" alt="Two dogs on a pet bed - Studio Shot">
+            </div>
+        </div>
+        
+        <!-- Key Features List -->
+        <div class="features-list-container">
+            <div style="text-align: center;">
+                <h3 class="title-with-paw" style="font-size: 2.2rem; font-weight: 700; color: #E63946; margin-bottom: 2rem;">Service Highlights</h3>
+            </div>
+            <div style="text-align: left;">
+            <ul class="features-list">
+                <li>Conveniently located at Ghodbunder Road in Thane</li>
+                <li>Exceptionally safe and clean environment</li>
+                <li>Personalized yet affordable care</li>
+                <li>Pet Services</li>
+                <li>Professional Pet Grooming & Massage Parlor</li>
+                <li>Timely Vaccination Support</li>
+                <li>Free Veterinary Check-up</li>
+                <li>Expert Nutrition and Health Consultation</li>
+            </ul>
+            </div>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Card 1: Agility & Training -->
+            <div class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="/assets/cards/dog1.png" alt="Agility Class">
+                </div>
+                <h3>Grooming</h3>
+                <p>Professional grooming services that keep your pet clean, comfortable, and well cared for, with gentle handling and pet-safe hygiene practices.</p>
+                <a href="#" class="btn-card">READ MORE</a>
+            </div>
+
+            <!-- Card 2: Pet Hotel & Boarding -->
+            <div class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="./assets/cards/cat2.png" alt="Pet Hotel">
+                </div>
+                <h3>Boarding</h3>
+                <p>Comfortable, well-ventilated boarding spaces with regular supervision, playtime, and personalized care — ensuring your pet stays relaxed, secure, and well cared for.</p>
+                <a href="#" class="btn-card">READ MORE</a>
+            </div>
+
+            <!-- Card 3: Day Care & Socialization -->
+            <div class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="./assets/cards/dog2.png" alt="Obedience & Day Care">
+                </div>
+                <h3>Day Care</h3>
+                <p>A spacious indoor-outdoor day care where pets can socialize, play, and stay active throughout the day in a safe and controlled setting.</p>
+                <a href="#" class="btn-card">READ MORE</a>
+            </div>
+
+            <!-- Card 4: Veterinary Support -->
+            <div class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="./assets/cards/cat.png" alt="Veterinary Support">
+                </div>
+                <h3>Veterinary Support</h3>
+                <p>On-call veterinary care and basic health checks for pets staying with us, providing safety, comfort, and peace of mind.</p>
+                <a href="#" class="btn-card">READ MORE</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- --- About Us Section --- -->
+<section class="about-section">
+    <div class="about-container">
+        <!-- Text Column -->
+        <div class="about-content">
+            <div class="section-header">
+                <h2 class="title-with-paw">About Us</h2>
+            </div>
+            <span class="about-subtitle">Where Comfort Meets Care</span>
+            <p class="about-text">
+                At PetsHotel, we believe every pet deserves a vacation as relaxing as yours. Our facility is designed to provide a safe, hygienic, and loving environment where your furry friends feel right at home.
+            </p>
+            <p class="about-text">
+                We strictly prioritize safety, hygiene, and comfort. Whether it's a cozy nap in our climate-controlled boarding suites or social playtime under careful supervision, your pet's happiness is our obsession.
+            </p>
+            <a href="#" class="btn-about">CONTACT US</a>
+        </div>
+
+        <!-- Image Collage Column -->
+        <div class="about-images">
+            <!-- Large Main Circle -->
+            <div class="img-circle circle-lg" >
+                <img src="./assets/cards/about1.png" alt="Happy Dog Portrait">
+            </div>
+            <!-- Small Overlapping Circle -->
+            <div class="img-circle circle-sm">
+                <img src="./assets/cards/about2.png" alt="Cat Relaxing">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider hero-bg-pattern"></div>
+
+<!-- --- Why Choose Us Section --- -->
+<section class="why-choose-us">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+            <h2 class="title-with-paw" style="padding-top: 10px;">Why Choose Us?</h2>
+            <p style="padding-bottom: 10px;">Your pet’s happiness and safety are our top priorities.</p>
+        </div>
+
+        <!-- Main Content Wrapper -->
+        <div class="why-choose-content">
+            <!-- Left Side: Feature Grid -->
+            <div class="why-choose-grid">
+                <!-- Card 1 -->
+                <div class="choose-card">
+                    <div class="choose-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Happy & Healthy</h3>
+                    <p>Keep your pet active, stress-free, and emotionally happy in a caring environment.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="choose-card">
+                    <div class="choose-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Stop Bad Habits</h3>
+                    <p>Structured routines and gentle guidance help reduce anxiety and unwanted behaviors.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="choose-card">
+                    <div class="choose-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Competitions</h3>
+                    <p>Fun challenges and activities that boost confidence and mental stimulation.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="choose-card">
+                    <div class="choose-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Socialization</h3>
+                    <p>Safe interaction with other pets to build confidence and positive behavior.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="choose-card">
+                    <div class="choose-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3>Quality Treats</h3>
+                    <p>Nutritious, pet-safe treats provided with owner approval and dietary care.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="choose-card">
+                    <div class="choose-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Loving Staff</h3>
+                    <p>Trained, passionate caregivers who treat every pet like family.</p>
+                </div>
+            <!-- End of Grid -->
+            </div>
+        </div> 
+    </div>
+    
+    <!-- Right Side: Dog Image - Moved Outside Container for Full Edge Alignment -->
+    <div class="why-choose-image-container">
+        <div class="why-choose-dog-img">
+            <img src="./assets/why_choose_dog.png" alt="Happy Golden Retriever">
+        </div>
+    </div>
+</section>
+
+<!-- Stats / Impact Section -->
+<section class="stats-section">
+    <div class="container stats-container">
+        <!-- Card 1: Professionals -->
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-user-doctor"></i>
+            </div>
+            <h3 class="stat-number" data-target="14">0+</h3>
+            <span class="stat-label">Experienced Pet Care Professionals
+</span>
+        </div>
+
+        <!-- Card 2: Adopted Pets -->
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-dog"></i>
+            </div>
+            <h3 class="stat-number" data-target="700">0+</h3>
+            <span class="stat-label">Pets Cared for with Love</span>
+        </div>
+
+        <!-- Card 3: Happy Clients -->
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-smile-beam"></i>
+            </div>
+            <h3 class="stat-number" data-target="500">0+</h3>
+            <span class="stat-label">Happy Pet Parents</span>
+        </div>
+    </div>
+</section>
+</section>
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="container">
+        <!-- Section Header with Paw Effect -->
+            <div class="section-header">
+                <h2 class="title-with-paw">What People Say</h2>
+            </div>
+        <div class="testimonials-slider">
+            <!-- Left Arrow -->
+
+            <div class="testi-grid">
+                <!-- Card 1 -->
+                <div class="testi-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="testi-content">
+                        <div class="testi-img">
+                            <img src="./assets/profile_linda.png" alt="Linda Smith">
+                        </div>
+                        <div class="testi-text">
+                            <p>PetsHotel provided exceptional care for my little puppy. The staff is knowledgeable, friendly, and truly loves animals. I felt completely at ease leaving my dog in their capable hands.</p>
+                            <div class="testi-author">
+                                <h4>Linda Smith</h4>
+                                <span>- Veterinarian</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="testi-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="testi-content">
+                        <div class="testi-img">
+                            <img src="./assets/profile_jonas.png" alt="Jonas Doe">
+                        </div>
+                        <div class="testi-text">
+                            <p>I was worried about boarding my golden retriever for the first time, but he absolutely loved it here! The daily updates and photos gave me peace of mind. He came home happy and exhausted from playing!</p>
+                            <div class="testi-author">
+                                <h4>Jonas Doe</h4>
+                                <span>- Dog Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Arrow -->
+        </div>
+    </div>
+    
+    <!-- Scroll To Top Button -->
+    <a href="#" class="scroll-top"><i class="fas fa-chevron-up"></i></a>
+</section>
+
+<!-- Join Us Section -->
+<section class="join-us-section">
+    <div class="container join-container">
+        <!-- Text Card -->
+        <div class="join-card">
+            <h2 style="padding-bottom: 10px;">Ready to Give Your Pet the Care They Deserve?</h2>
+            <p>Whether it’s boarding, grooming, day care, or training, we’re here to make your pet feel safe, loved, and happy. Book a visit or talk to our team today — your pet will thank you.</p>
+            <a href="#" class="btn-primary" style="border-radius: 10px;">CONTACT US</a>
+        </div>
+        
+        <!-- Overlapping Bulldog Image -->
+        <div class="join-bulldog-container">
+            <img src="assets/join_frenchie.png" alt="Happy French Bulldog" class="join-bulldog">
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & About -->
+                <div class="footer-col brand-col">
+                    <img src="assets/logo-removebg-preview.png" alt="PetsHotel Logo" class="footer-logo-img" style="height: 200px;">
+                   
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col links-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Our Services -->
+                <div class="footer-col services-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">Pet Boarding</a></li>
+                        <li><a href="#">Pet Grooming</a></li>
+                        <li><a href="#">Dog Training</a></li>
+                        <li><a href="#">Veterinary Care</a></li>
+                        <li><a href="#">Day Care</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="footer-col contact-col">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Pet Street, Happy Tails City, KA 560001</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 747-800-9880</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@petshotel.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <p>&copy; 2024 PetsHotel. All Rights Reserved. | Made With ❤️  by <a href="https://iflorainfo.com/" target="_blank" style="color: #E63946;">IIPL</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Slider & Stats Logic -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Slider Logic ---
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevSlide');
+        const nextBtn = document.getElementById('nextSlide');
+        let currentSlide = 0;
+        const slideIntervalTime = 5000;
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            let next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+
+        function prevSlide() {
+            let prev = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(prev);
+        }
+
+        function startSlider() {
+            slideInterval = setInterval(nextSlide, slideIntervalTime);
+        }
+
+        function stopSlider() {
+            clearInterval(slideInterval);
+        }
+
+        if(slides.length > 0 && prevBtn && nextBtn) { // Check if slider elements exist
+            slides[0].classList.add('active'); // Initialize first slide
+            nextBtn.addEventListener('click', () => {
+                stopSlider();
+                nextSlide();
+                startSlider();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                stopSlider();
+                prevSlide();
+                startSlider();
+            });
+            startSlider();
+        }
+
+        // --- Stats Counter Animation ---
+        const statsSection = document.querySelector('.stats-section');
+        const statNumbers = document.querySelectorAll('.stat-number');
+        let started = false; // Ensure animation only runs once
+
+        if (statsSection && statNumbers.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !started) {
+                        started = true;
+                        statNumbers.forEach(num => startCount(num));
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when 50% visible
+
+            observer.observe(statsSection);
+        }
+
+        function startCount(el) {
+            const target = +el.getAttribute('data-target');
+            const duration = 2000; // Animation duration in ms
+            const stepTime =50; // Update every 20ms
+            const steps = duration / stepTime;
+            const increment = target / steps;
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    el.innerText = target + "+";
+                    clearInterval(timer);
+                } else {
+                    el.innerText = Math.ceil(current) + "+";
+                }
+            }, stepTime);
+        }
+    });
+</script>
+
+</body>
+</html>
