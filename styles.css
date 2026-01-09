@@ -3663,3 +3663,46 @@ body {
         display: none !important;
     }
 }
+
+/* --- MOBILE PAW FIXES: Standardized Placement --- */
+@media (max-width: 768px) {
+    /* Override specificity for ALL sections to fix paw placement */
+    .features-list-container .title-with-paw::before,
+    .why-choose-us .title-with-paw::before,
+    .classic-about-section .title-with-paw::before,
+    .about-section .title-with-paw::before,
+    .section-padding .title-with-paw::before,
+    .gallery-section .title-with-paw::before,
+    .story-timeline-section .title-with-paw::before,
+    .testimonials-section .title-with-paw::before,
+    .title-with-paw::before {
+        content: "";
+        position: absolute;
+        width: 50px !important;      /* Consistent smaller size for mobile */
+        height: 50px !important;
+        top: 50% !important;         /* Center vertically relative to text */
+        left: 50% !important;        /* Center horizontally relative to text */
+        margin-top: -25px !important;/* Half of height to dead center vertically */
+        margin-left: -25px !important;/* Half of width to dead center horizontally */
+        transform: rotate(-10deg) !important; /* Slight rotation */
+        opacity: 0.15 !important;    /* Subtle enough not to interfere with reading */
+        background-image: url('assets/icons/paw-soft.jpg') !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        z-index: -1;
+    }
+
+    /* Ensure specific containers force center alignment so the inline-block title is centered */
+    .features-list-container,
+    .section-header, 
+    .about-content,
+    .shop-gallery-header {
+        text-align: center !important;
+    }
+    
+    .title-with-paw {
+        display: inline-block !important;
+        position: relative !important;
+        z-index: 1;
+    }
+}
