@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grooming - Pet Hotels</title>
+    <link rel="shortcut icon" href="assets/logo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">
+                <span class="contact-item">
+                    Call us: <strong>747-800-9880</strong>
+                </span>
+            </div>
+            <div class="top-bar-right">
+                <span class="follow-label">Follow :</span>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+        <div class="container header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/image.png" alt="Pet Clinic Logo">
+                </a>
+            </div>
+
+            <!-- Mobile Menu -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span><i class="fas fa-bars"></i></span>
+            </label>
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><span>Home</span></a></li>
+                    <li><a href="about.html"><span>About Us</span></a></li>
+                    <li><a href="boarding.html"><span>Boarding</span></a></li>
+                    <li><a href="veterinary.html"><span>Veterinary Care</span></a></li>
+                    <li><a href="grooming.html" class="active"><span>Grooming</span></a></li>
+                    <li><a href="daycare.html"><span>Day Care</span></a></li>
+                    <li><a href="training.html"><span>Training</span></a></li>
+                    <li><a href="gallery.html"><span>Gallery</span></a></li>
+                    <li><a href="contact.html"><span>Contact Us</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- 1. HERO SECTION -->
+<section class="page-hero creative-hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/grooming_hero_bg.png'); background-size: cover; background-position: center;">
+    <div class="container hero-content">
+        <h1 class="hero-title-large">Professional Pet Grooming</h1>
+        <p class="hero-subtext" style="margin-bottom: 30px;">Pamper your pet with our full-service bathing and styling treatments.</p>
+        <div style="margin-bottom: 30px;">
+            <a href="contact.html" class="btn-primary" style="display: inline-block; background-color: #E63946; border: none; padding: 15px 40px; border-radius: 50px; font-size: 1.1rem; box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);">Book a Spa Day</a>
+        </div>
+        <div class="hero-underline"><i class="fas fa-paw"></i></div>
+    </div>
+</section>
+
+<!-- 2. GROOMING CONTENT -->
+<section class="section-padding about-section">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+            <h2 class="title-with-paw">Grooming Services</h2>
+            <p>Look Good, Feel Good</p>
+        </div>
+
+        <div class="boarding-content-wrapper" style="max-width: 1100px; margin: 0 auto; line-height: 1.8; color: #555; text-align: left;">
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 50px; margin-bottom: 60px; align-items: start;">
+                <!-- Left Column: Image Area -->
+                <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <img src="assets/grooming_content_indian.png" alt="Professional Pet Grooming" style="width: 100%; height: auto; display: block;">
+                </div>
+
+                <!-- Right Column: Description & Services -->
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="color: #1D3557; font-weight: 700; margin-bottom: 20px; font-size: 1.8rem;">Full Line Grooming & Bathing</h3>
+                    <p class="mb-4" style="font-size: 1.05rem;">
+                        <strong>PetsHotel</strong> offers a complete range of grooming and bathing services designed to keep your pet looking and feeling their best. Whether it's a routine bath or a full makeover, our professional groomers are here to help.
+                    </p>
+                    
+                    <ul style="list-style: none; padding: 0; margin-bottom: 30px; display: grid; gap: 15px;">
+                        <li style="display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-tag" style="color: #E63946; font-size: 1.1rem;"></i> 
+                            <span>Prices comparable to local grooming shops.</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-calendar-check" style="color: #E63946; font-size: 1.1rem;"></i> 
+                            <span>Request a bath or groom during check-in.</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-spa" style="color: #E63946; font-size: 1.1rem;"></i> 
+                            <span>Ask about our new <strong>massage bath</strong>.</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-star" style="color: #E63946; font-size: 1.1rem;"></i> 
+                            <span>Experience our signature <strong>"Pampered Pet"</strong> treatment!</span>
+                        </li>
+                    </ul>
+                    
+                     <div style="background-color: #f0f7ff; padding: 15px 20px; border-radius: 8px; border-left: 4px solid #1D3557; font-weight: 600; color: #1D3557;">
+                        <i class="fas fa-walking" style="margin-right: 8px;"></i> Walk-ins are accommodated whenever possible.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specific Services Grid -->
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h3 style="color: #1D3557; font-weight: 800; font-size: 2rem;">Specialized Treatments</h3>
+                <p style="color: #777; max-width: 600px; margin: 0 auto;">Beyond a standard wash, we offer specialized care for every coat type.</p>
+            </div>
+
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px;">
+                
+                <!-- Service 1 -->
+                <div class="feature-card" style="background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center; border-bottom: 4px solid #4a90e2;">
+                    <div style="font-size: 2rem; color: #4a90e2; margin-bottom: 15px;"><i class="fas fa-spray-can"></i></div>
+                    <h4 style="font-size: 1.1rem; font-weight: 700; color: #333;">Coat Conditioning</h4>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="feature-card" style="background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center; border-bottom: 4px solid #e25555;">
+                    <div style="font-size: 2rem; color: #e25555; margin-bottom: 15px;"><i class="fas fa-bug"></i></div>
+                    <h4 style="font-size: 1.1rem; font-weight: 700; color: #333;">Flea Treatment</h4>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="feature-card" style="background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center; border-bottom: 4px solid #50c878;">
+                    <div style="font-size: 2rem; color: #50c878; margin-bottom: 15px;"><i class="fas fa-prescription-bottle-alt"></i></div>
+                    <h4 style="font-size: 1.1rem; font-weight: 700; color: #333;">Medicated Baths</h4>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="feature-card" style="background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center; border-bottom: 4px solid #f39c12;">
+                    <div style="font-size: 2rem; color: #f39c12; margin-bottom: 15px;"><i class="fas fa-tooth"></i></div>
+                    <h4 style="font-size: 1.1rem; font-weight: 700; color: #333;">Teeth Brushing</h4>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="feature-card" style="background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center; border-bottom: 4px solid #9b59b6;">
+                    <div style="font-size: 2rem; color: #9b59b6; margin-bottom: 15px;"><i class="fas fa-cut"></i></div>
+                    <h4 style="font-size: 1.1rem; font-weight: 700; color: #333;">Dematting</h4>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- 8. CTA SECTION -->
+<section class="join-us-section">
+    <div class="container join-container">
+        <!-- Text Card -->
+        <div class="join-card refined-cta">
+            <h2>Ready for a Spa Day?</h2>
+            <p>Treat your furry friend to the ultimate grooming experience. They'll leave looking and smelling amazing!</p>
+            <a href="contact.html" class="btn-primary" style="margin-top: 20px;">CONTACT US</a>
+        </div>
+        
+        <!-- Dog Image -->
+        <div class="join-bulldog-container">
+            <img src="assets/join_frenchie.png" alt="Happy French Bulldog" class="join-bulldog">
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & About -->
+                <div class="footer-col brand-col">
+                    <img src="assets/logo-removebg-preview.png" alt="PetsHotel Logo" class="footer-logo-img" style="height: 200px;">
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col links-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="boarding.html">Boarding</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Our Services -->
+                <div class="footer-col services-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="boarding.html">Pet Boarding</a></li>
+                        <li><a href="grooming.html">Pet Grooming</a></li>
+                        <li><a href="training.html">Dog Training</a></li>
+                        <li><a href="veterinary.html">Veterinary Care</a></li>
+                        <li><a href="daycare.html">Day Care</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="footer-col contact-col">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Pet Street, Happy Tails City, KA 560001</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 747-800-9880</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@petshotel.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <p>&copy; 2024 PetsHotel. All Rights Reserved. | Made With ❤️  by <a href="https://iflorainfo.com/" target="_blank" style="color: #E63946;">Iflora Info. PVT. LTD.</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+
+/* =========================================
+   GALLERY PAGE SPECIFIC STYLES
+   ========================================= */
+/* Container for the masonry grid */
+.gallery-page-grid {
+    column-count: 4;
+    column-gap: 20px;
+    padding: 20px 0;
+}
+
+/* Individual Card Item */
+.gallery-card {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    border: 5px solid #FFD600; /* Yellow Border as per request */
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    display: inline-block; /* Helps with break-inside in some browsers */
+    width: 100%;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.03);
+}
+
+/* Lightbox Overlay */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* Lightbox Content Info */
+.lightbox-content-wrapper {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    animation: zoomIn 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 85vh;
+    border: 5px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+
+/* Lightbox Controls */
+.lightbox-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: #E63946;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 5px;
+    transition: background 0.3s;
+    user-select: none;
+}
+
+.lightbox-nav:hover {
+    background: rgba(230,29,29,0.7);
+}
+
+.lightbox-prev { left: -80px; }
+.lightbox-next { right: -80px; }
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .gallery-page-grid {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-page-grid {
+        column-count: 2;
+    }
+    .lightbox-prev { left: 10px;top: 50%; font-size: 2rem; }
+    .lightbox-next { right: 10px; top: 50%; font-size: 2rem; }
+    .lightbox-close { top: 10px; right: 10px; color: #fff; z-index: 10002; }
+    .lightbox-content-wrapper { width: 100%; }
+    .lightbox-img { width: 100%; height: auto; }
+}
+
+@media (max-width: 480px) {
+    .gallery-page-grid {
+        column-count: 1;
+    }
+}

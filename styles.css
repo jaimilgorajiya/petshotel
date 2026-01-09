@@ -555,14 +555,77 @@ ul { list-style: none; }
 
 /* Paw print specifically for About Us section, Service Highlights, and Why Choose Us */
 /* Paw print specifically for About Us section, Service Highlights, Why Choose Us, and Testimonials */
-.about-section .title-with-paw::before,
+
 .features-list-container .title-with-paw::before,
 .why-choose-us .title-with-paw::before,
-.testimonials-section .title-with-paw::before,
-.classic-about-section .title-with-paw::before {
+.classic-about-section .title-with-paw::before{
     content: "";
     position: absolute;
-    top: -25px;
+    top: -8px;
+    left: -34px;
+    transform: rotate(-20deg);
+    width: 65px; 
+    height: 65px;
+    background-image: url('assets/icons/paw-soft.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.15; 
+    z-index: -1;
+    mix-blend-mode: multiply; 
+}
+.about-section .title-with-paw::before{
+       content: "";
+    position: absolute;
+    top: -20px;
+    left: -25px;
+    transform: rotate(-20deg);
+    width: 65px; 
+    height: 65px;
+    background-image: url('assets/icons/paw-soft.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.15; 
+    z-index: -1;
+    mix-blend-mode: multiply; 
+}
+.gallery-section .title-with-paw::before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -25px;
+    transform: rotate(-20deg);
+    width: 65px; 
+    height: 65px;
+    background-image: url('assets/icons/paw-soft.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.15; 
+    z-index: -1;
+    mix-blend-mode: multiply; 
+}
+.story-timeline-section .title-with-paw::before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -25px;
+    transform: rotate(-20deg);
+    width: 65px; 
+    height: 65px;
+    background-image: url('assets/icons/paw-soft.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.15; 
+    z-index: -1;
+    mix-blend-mode: multiply; 
+}
+.testimonials-section .title-with-paw::before{
+    content: "";
+    position: absolute;
+    top: -20px;
     left: -35px;
     transform: rotate(-20deg);
     width: 65px; 
@@ -1950,15 +2013,91 @@ ul { list-style: none; }
    ========================================= */
 
 /* --- 1. Creative Hero --- */
+/* --- 1. Creative Hero (Refined Dark Theme with Scalloped Top) --- */
 .creative-hero {
     position: relative;
     overflow: hidden;
-    padding: 140px 0 180px 0; /* Huge padding for grand entrance */
-    /* Background Image with Overlay */
-    background: linear-gradient(rgba(255, 253, 245, 0.9), rgba(255, 253, 245, 0.8)), url('assets/gallery/WhatsApp Image 2026-01-07 at 14.38.53.jpeg');
+    /* Increased top padding to accommodate scallop and header */
+    padding: 180px 0 140px 0; 
+    /* Dark Overlay for White Text Contrast */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('assets/image\ copy\ 2.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: scroll;
+    /* Center content by default */
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Scalloped Top Edge */
+.creative-hero::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Slight overlap to ensure no gaps */
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #ffffff; /* Match the header/body bg */
+    z-index: 10;
+    /* Create Scallops using radial gradient */
+    background-image: radial-gradient(circle, #ffffff 60%, transparent 65%);
+    background-size: 40px 40px; /* Size of each scallop */
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    /* We actually need the 'inverse' to make it look like the white section is eating into the image */
+    /* Let's try a simpler approach: A white strip with 'holes' or just simple circles at top */
+    /* actually, the reference has white SCALLOPS pointing DOWN. */
+    /* White circles on top of the image */
+    background: 
+        radial-gradient(circle at 50% 0, transparent 0, transparent 0), /* reset */
+        radial-gradient(circle, #fff 50%, transparent 55%);
+    background-size: 60px 60px;
+    background-position: top center;
+    height: 30px;
+    top: 0;
+}
+/* Better Scallop Implementation */
+.creative-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-image: radial-gradient(circle, #ffffff 50%, transparent 51%);
+    background-size: 60px 60px;
+    background-position: top center;
+    background-repeat: repeat-x;
+    transform: rotate(180deg); /* Flip to point down if needed, or just let white circles sit on top */
+    z-index: 5;
+    transform-origin: center top;
+}
+
+.creative-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Ensure Text is White */
+.creative-hero .hero-title-large {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.creative-hero .hero-subtext {
+    color: #f0f0f0 !important;
+    font-weight: 500;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+
+.creative-hero .hero-underline {
+    border-color: rgba(255,255,255,0.3);
+}
+.creative-hero .hero-underline i {
+    color: #ffffff;
+    background: transparent;
 }
 
 /* Background Pattern (Subtle moving paws) - Restored for Services Section */
@@ -2628,6 +2767,7 @@ ul { list-style: none; }
 /* --- 10. Gallery Section --- */
 .gallery-section {
     padding: 80px 0;
+    padding-bottom: 150px !important;
     background-color: #fff;
 }
 
@@ -2642,7 +2782,7 @@ ul { list-style: none; }
     position: relative;
     border-radius: 15px;
     overflow: hidden;
-    height: 300px;
+    height: 500px; /* Taller to show full image */
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -2709,6 +2849,7 @@ ul { list-style: none; }
 .fill-white { fill: #ffffff; }
 .fill-light { fill: #f8f9fa; } /* Standard light bg */
 .fill-cream { fill: #FFFDF5; }
+.fill-dark-beige { fill: #F6F2EA; } /* Why Choose Us bg */
 
 /* Refined Cards (Less Boxy) */
 .value-card, .trust-card {
@@ -2749,3 +2890,5 @@ ul { list-style: none; }
 .section-padding {
     padding: 100px 0; /* More breathing room */
 }
+
+
