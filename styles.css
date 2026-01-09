@@ -3706,3 +3706,43 @@ body {
         z-index: 1;
     }
 }
+
+/* --- MOBILE PAW FIXES: Left Alignment (Reverting Centered Look) --- */
+@media (max-width: 768px) {
+    /* Position the paw icon to the left of the text, similar to desktop */
+    .features-list-container .title-with-paw::before,
+    .why-choose-us .title-with-paw::before,
+    .classic-about-section .title-with-paw::before,
+    .about-section .title-with-paw::before,
+    .section-padding .title-with-paw::before,
+    .gallery-section .title-with-paw::before,
+    .story-timeline-section .title-with-paw::before,
+    .testimonials-section .title-with-paw::before,
+    .title-with-paw::before {
+        left: -25px !important;      /* Pull to left of text */
+        top: -15px !important;       /* Pull slightly up */
+        
+        /* Reset spacing used for centering */
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+        
+        /* Restore size and rotation */
+        width: 60px !important;
+        height: 60px !important;
+        transform: rotate(-20deg) !important;
+        
+        opacity: 0.15 !important;
+        background-image: url('assets/icons/paw-soft.jpg') !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        position: absolute;
+        z-index: -1;
+    }
+
+    /* Keep the title inline-block so the paw stays relative to the text width */
+    .title-with-paw {
+        display: inline-block !important;
+        position: relative !important;
+        z-index: 1;
+    }
+}
