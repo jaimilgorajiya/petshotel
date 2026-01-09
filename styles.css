@@ -3977,3 +3977,43 @@ body {
         box-sizing: border-box;
     }
 }
+
+/* --- Daycare Page Mobile Content Fix --- */
+@media (max-width: 900px) {
+    /* Target the grid container in Daycare page */
+    .boarding-content-wrapper > div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    /* Fix image container */
+    .boarding-content-wrapper img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Reset margins for content blocks */
+    .boarding-content-wrapper > div {
+        margin-bottom: 30px !important;
+    }
+
+    /* Ensure text is readable and not cramped */
+    .boarding-content-wrapper p,
+    .boarding-content-wrapper li {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Fix the specific blockquote on mobile */
+    .boarding-content-wrapper blockquote {
+        padding: 15px !important;
+        margin: 20px 0 !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Fix 'In Good Company' box */
+    div[style*="background-color: #e0f7fa"] {
+        padding: 20px !important;
+        margin-top: 0 !important;
+    }
+}
