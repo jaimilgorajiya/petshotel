@@ -3341,3 +3341,325 @@ body {
         font-size: 0.85rem;
     }
 }
+
+/* =========================================
+   MOBILE PURE POLISH & OPTIMIZATION (v2.0)
+   Ensuring a Premium Mobile Experience
+   ========================================= */
+
+/* --- 1. GLOBAL MOBILE BASICS --- */
+@media (max-width: 768px) {
+    /* Safe container padding */
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Prevent overflow issues */
+    body, html {
+        overflow-x: hidden;
+    }
+
+    /* Better Text Sizes for Mobile */
+    h1, .hero-title-large, .slide-content h1 {
+        font-size: 2.2rem !important; /* Scale down big titles */
+        line-height: 1.2;
+    }
+
+    h2, .title-with-paw {
+        font-size: 1.8rem !important; /* Scale down section titles */
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 1.4rem !important;
+    }
+
+    p {
+        font-size: 1rem !important;
+        line-height: 1.6;
+    }
+}
+
+/* --- 2. HEADER & NAV IMPROVEMENTS --- */
+@media (max-width: 1024px) {
+    /* Ensure Header Height doesn't glitch */
+    .main-header {
+        height: auto;
+        padding: 15px 0;
+        position: relative;
+    }
+
+    /* Logo Positioning */
+    .logo {
+        margin-right: auto; /* Push mainly to left */
+    }
+    
+    .logo img {
+        height: 60px; /* Resize for mobile */
+    }
+
+    /* Improved Hamburger Menu Icon */
+    .nav-toggle-label {
+        display: flex;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        justify-content: center;
+        background: rgba(0,0,0,0.05);
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    
+    .nav-toggle-label span {
+        font-size: 1.4rem;
+        color: var(--brand-red);
+    }
+
+    /* Dropdown Animation & Style */
+    .main-nav {
+        top: 100% !important; /* Position right below header */
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        border-radius: 0 0 20px 20px;
+        padding: 10px 0 20px 0;
+        transition: all 0.3s ease-in-out;
+        transform-origin: top;
+        opacity: 0;
+        transform: scaleY(0);
+        display: block !important; 
+        pointer-events: none; /* Prevent clicks when hidden */
+    }
+
+    /* When Checked */
+    #nav-toggle:checked ~ .main-nav {
+        opacity: 1;
+        transform: scaleY(1);
+        pointer-events: all;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-nav a {
+        padding: 15px 30px;
+        text-align: left;
+        width: 100%;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(0,0,0,0.03);
+        transform: none !important; /* Remove desktop skew */
+        font-size: 1.1rem;
+    }
+    
+    .main-nav a span {
+        transform: none !important;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+        background-color: #FFF5F5; /* Light red tint bg */
+        color: var(--brand-red);
+        padding-left: 35px; /* Slight slide effect */
+    }
+}
+
+/* --- 3. SECTIONS STACKING & SPACING --- */
+@media (max-width: 900px) {
+    /* 1. Services Grid */
+    .services-grid {
+        grid-template-columns: 1fr; /* Single Column */
+        gap: 30px;
+        width: 100%;
+    }
+
+    /* 2. Hero Slider Content */
+    .slide-content {
+        padding-left: 0;
+        align-items: center; /* Center Text */
+        text-align: center;
+    }
+    
+    .slide-content h1 {
+        text-align: center;
+        max-width: 100%;
+        font-size: 2rem !important;
+    }
+    
+    .slide-content p {
+        text-align: center;
+        max-width: 90%;
+        margin: 0 auto 30px auto;
+    }
+
+    /* 3. About Images */
+    .about-images {
+        height: 350px;
+        margin-top: 40px;
+    }
+    
+    .circle-lg {
+        width: 250px; height: 250px;
+    }
+    
+    .circle-sm {
+        width: 150px; height: 150px;
+    }
+    
+    /* 4. Pet Shop Locations */
+    .shop-locations-grid {
+        grid-template-columns: 1fr !important;
+        gap: 25px;
+    }
+    
+    .location-card {
+        padding: 25px;
+    }
+    
+    /* 5. Generic Grid Helper */
+    .grid-3-col, .grid-4-col {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* --- 4. PET SHOP SPECIFIC --- */
+@media (max-width: 600px) {
+    .petshop-intro-block {
+        border-left: 3px solid var(--brand-red); /* Thinner border */
+        padding-left: 15px;
+        margin-left: 0;
+    }
+    
+    /* Ensure gallery images don't break */
+    .shop-gallery-grid {
+        grid-template-columns: 1fr !important; /* Force Single Column stack */
+    }
+    
+    .shop-gallery-item {
+        height: 220px; /* Reduced height */
+    }
+}
+
+/* --- 5. JOIN US & OVERLAPS --- */
+@media (max-width: 992px) {
+    .join-container {
+        flex-direction: column;
+    }
+    
+    .join-card {
+        margin: 0 auto;
+        width: 90%;
+        text-align: center;
+        padding: 40px 30px;
+    }
+    
+    .join-bulldog-container {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin-top: -30px;
+        width: 200px;
+        z-index: 2;
+    }
+    
+    /* Fix the button on mobile */
+    .join-card .btn-primary {
+        width: 100%;
+        display: block;
+        padding: 15px;
+    }
+}
+
+/* --- 6. FOOTER STACKING --- */
+@media (max-width: 768px) {
+    .site-footer {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr; /* Fully stack */
+        gap: 40px;
+    }
+
+    .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .contact-list li {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .contact-list li i {
+        margin-top: 5px;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+}
+
+/* --- 7. BUTTONS & TOUCH TARGETS --- */
+@media (max-width: 1024px) {
+    /* Make buttons full width on small screens for ease */
+    .btn-slider, .btn-about, .btn-card {
+        padding: 16px 30px; /* Larger tap area */
+        font-size: 1rem;
+    }
+    
+    /* Fix weird skews on mobile */
+    .btn-appointment {
+        transform: none;
+    }
+    .btn-appointment span {
+        transform: none;
+    }
+    /* Hide top bar on mobile */
+    .top-bar { display: none; }
+}
+
+/* --- 8. FIXING PAW ICONS ON MOBILE --- */
+@media (max-width: 600px) {
+    /* Hide the floating decorative paw or make it subtle behind text */
+    .title-with-paw::before {
+        opacity: 0.1;
+        width: 50px; height: 50px;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-10deg);
+        z-index: -1;
+    }
+    
+    .title-with-paw {
+        display: block;
+        margin-bottom: 25px;
+    }
+}
+
+/* --- MOBILE FIXES: Remove slider arrows & curve --- */
+@media (max-width: 768px) {
+    /* Hide the side navigation arrows */
+    .slider-arrow {
+        display: none !important;
+    }
+
+    /* Hide the decorative wavy curve at the bottom of the slider */
+    .hero-slider::after {
+        display: none !important;
+    }
+}
