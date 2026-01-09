@@ -3865,3 +3865,72 @@ body {
         margin-top: -10px !important; /* Negative margin to counteract the inline style on the button container */
     }
 }
+
+/* --- Mobile Spacing & Padding Cleanup --- */
+@media (max-width: 768px) {
+    /* 1. Reset standard section padding to be uniform */
+    .section-padding,
+    .why-choose-us,
+    .testimonials-section,
+    .stats-section,
+    .gallery-section,
+    .about-section {
+        padding: 50px 0 !important;
+    }
+
+    /* 2. Ensure section headers have consistent bottom margin */
+    .section-header {
+        margin-bottom: 30px !important;
+    }
+
+    /* 3. Standardize paragraph sizing in headers */
+    .section-header p {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 10px !important;
+    }
+
+    /* 4. Fix specific "The Need" / "The Solution" alignment */
+    .story-timeline-section .timeline-container {
+        gap: 40px !important; 
+        margin-top: 30px !important;
+    }
+
+    .timeline-step {
+        padding: 0 10px !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .timeline-step h3 {
+        margin-top: 15px !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* 5. Fix "Values & Trust" Spacing */
+    .why-choose-content {
+        margin-top: 30px !important;
+    }
+    
+    /* 6. Standardize Paw Icon Offset once more to be perfect */
+    .title-with-paw::before {
+        top: -10px !important;
+        left: -15px !important; /* Slightly tighter */
+    }
+    
+    .title-with-paw {
+        display: inline-block !important; /* Ensure it wraps text tight */
+        margin-bottom: 0 !important;
+    }
+
+    /* 7. Ensure Why Choose header padding is reset */
+    .why-choose-us .title-with-paw {
+        padding-top: 0 !important;
+    }
+
+    /* 8. Fix Stats Section Grid Gap */
+    .stats-container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        gap: 30px !important;
+    }
+}
