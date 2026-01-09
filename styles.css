@@ -4017,3 +4017,34 @@ body {
         margin-top: 0 !important;
     }
 }
+
+/* --- Global Button Styling Fix --- */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--brand-red);
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 14px 35px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--brand-red-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.6);
+    color: #ffffff;
+}
+
+/* Ensure full width responsiveness where needed (like constrained forms) if explicitly requested, 
+   but for general definition, keep inline-block. 
+   The contact form has inline style width:100%, which will override the width but not likely the display properly?
+   Actually button width:100% works fine on inline-block.
+*/
