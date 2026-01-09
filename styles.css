@@ -2893,3 +2893,451 @@ ul { list-style: none; }
 }
 
 
+/* --- PET SHOP PAGE STYLES --- */
+
+/* 1. Pet Shop Intro */
+.petshop-intro-wrapper {
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+}
+
+.petshop-intro-block {
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 4px solid var(--brand-red);
+}
+
+.petshop-intro-block h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.petshop-intro-block p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* 2. Store Locations Cards */
+.shop-locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.location-card {
+    background: #FFF;
+    border-radius: 16px;
+    padding: 30px; /* Reduced vertical padding */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05); /* Subtle border */
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to top */
+    position: relative;
+    overflow: hidden;
+    text-align: left; /* Keep left alignment for readability */
+}
+
+/* Top colored accent bar */
+.location-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: var(--brand-red);
+}
+
+.location-card:nth-child(2)::before { background: #E76F51; }
+.location-card:nth-child(3)::before { background: #264653; }
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.location-header {
+    margin-bottom: 15px; /* Reduced space */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.location-icon-circle {
+    width: 50px;
+    height: 50px;
+    background: rgba(230, 57, 70, 0.1);
+    color: var(--brand-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.location-card:nth-child(2) .location-icon-circle { background: rgba(231, 111, 81, 0.1); color: #E76F51; }
+.location-card:nth-child(3) .location-icon-circle { background: rgba(38, 70, 83, 0.1); color: #264653; }
+
+.location-card h4 {
+    font-size: 1.3rem; /* Slightly smaller for balance */
+    color: var(--text-dark);
+    font-weight: 700;
+    margin: 0;
+}
+
+.location-details {
+    margin-top: 10px; /* Separator */
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.shop-address-line {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.location-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    width: 100%;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* 3. Shop Gallery */
+.shop-gallery-container {
+    background-color: #FFF;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    margin-bottom: 60px;
+}
+
+.shop-gallery-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.shop-gallery-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    color: var(--text-dark);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.shop-gallery-subtitle {
+    color: #777;
+    font-size: 1.1rem;
+}
+
+.shop-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.shop-gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.shop-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.shop-gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.shop-gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* 4. Trust Strip */
+.trust-strip {
+    background-color: #FAFAFA;
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.trust-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #555;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.trust-text i {
+    color: var(--brand-red);
+    margin: 0 10px;
+}
+/* =========================================
+   PREMIUM GALLERY VARS & BASE
+   ========================================= */
+:root {
+    --primary-color: #E63946;
+    --text-dark: #1D1D1F;
+    --text-light: #F5F5F7;
+    --bg-light: #FFFFFF;
+    --bg-off-white: #FAFAFA;
+    --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+    background-color: var(--bg-off-white);
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.page-hero.creative-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-attachment: scroll;
+}
+
+/* Overlay */
+.page-hero.creative-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.hero-title-large {
+    font-family: 'Nunito', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-subtext {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-underline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    margin-top: 1rem;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.hero-underline i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* =========================================
+   FILTERS
+   ========================================= */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    font-size: 0.95rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+}
+
+
+
+/* Filter Animation */
+.gallery-item.hide {
+    display: none;
+}
+
+/* =========================================
+   LIGHTBOX REFINED
+   ========================================= */
+.lightbox {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed; /* Ensure consistent positioning */
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active { display: flex; opacity: 1; }
+
+.lightbox-content-wrapper {
+    max-width: 95vw;
+    max-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.lightbox-img {
+    border-radius: 4px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    max-height: 90vh;
+    max-width: 100%;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    background: rgba(255,255,255,0.05);
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.lightbox-prev { left: 40px; }
+.lightbox-next { right: 40px; }
+
+.lightbox-nav:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    color: #fff;
+    background-size: 30px 30px;
+    background-position: top center;
+    background-repeat: repeat-x;
+    transform: rotate(180deg);
+    z-index: 5;
+    transform-origin: center top;
+}
+.lightbox-close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 1200px) {
+    .gallery-masonry {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding: 0 20px 60px 20px; /* Add side padding for tablets */
+    }
+}
+
+@media (max-width: 900px) {
+    .gallery-masonry {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-masonry {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .hero-title-large {
+        font-size: 2.5rem;
+    }
+    
+    .lightbox-prev { left: 10px; width: 40px; height: 40px; font-size: 1.5rem; }
+    .lightbox-next { right: 10px; width: 40px; height: 40px; font-size: 1.5rem; }
+    
+    .gallery-filters {
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
