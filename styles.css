@@ -3934,3 +3934,46 @@ body {
         gap: 30px !important;
     }
 }
+
+/* --- GLOBAL INLINE STYLE OVERRIDES FOR MOBILE --- */
+/* This file is dedicated to forcefully overriding inline styles that cause spacing inconsistencies on mobile */
+
+@media (max-width: 900px) {
+    /* 
+     * Target all H2s and Ps that might have inline padding
+     * Using !important to override element-level styles
+     */
+    
+    /* Reset paddings for Section Headers to rely on CSS Standard Spacing */
+    .section-header h2, 
+    .section-header p,
+    .title-with-paw, 
+    h2[style*="padding"],
+    p[style*="padding"] {
+        padding-top: 0 !important;
+        padding-bottom: 10px !important; /* Keep slight bottom spacing for text separation */
+        margin-top: 0 !important;
+    }
+
+    /* Specifically target the 'Why Choose Us' and 'Values' headers which had inline padding top */
+    .why-choose-us .title-with-paw,
+    .why-choose-us h2 {
+        padding-top: 0 !important;
+    }
+
+    /* Join Us Section Headers - Remove specific inline bottom padding if it's too large */
+    .join-card h2 {
+        padding-bottom: 15px !important;
+        line-height: 1.3 !important;
+    }
+
+    /* Reset Paragraph margins/paddings in these cards */
+    .join-card p {
+        padding-bottom: 20px !important;
+    }
+
+    /* General clean slate for section spacing */
+    section {
+        box-sizing: border-box;
+    }
+}
