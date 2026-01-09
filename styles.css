@@ -79,6 +79,7 @@ ul { list-style: none; }
     font-size: 0.85rem;
     padding: 8px 0;
     border-bottom: 1px solid rgba(0,0,0,0.05); /* Subtle border */
+    overflow: hidden; /* Ensure ticker doesn't overflow container */
 }
 
 .top-bar-content {
@@ -95,6 +96,7 @@ ul { list-style: none; }
     display: flex;
     gap: 30px;
     align-items: center;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 .contact-item {
@@ -4162,5 +4164,92 @@ body {
     }
     .error-title {
         font-size: 2rem;
+    }
+}
+
+/* --- Header Ticker Animation --- */
+/* --- Header Ticker Animation --- */
+.header-ticker {
+    display: flex; /* Changed from inline-flex to flex */
+    position: relative;
+    overflow: hidden;
+    flex: 1; /* Take up all remaining space between left and right */
+    max-width: none; 
+    height: 30px; 
+    align-items: center;
+    color: var(--brand-red);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 30px; /* Space on both sides */
+    border-left: 1px solid rgba(0,0,0,0.1); 
+    border-right: 1px solid rgba(0,0,0,0.1); /* Separator on both sides */
+    padding: 0 20px;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.ticker-track {
+    display: flex;
+    white-space: nowrap;
+    gap: 30px; /* Space between items */
+    animation: tickerScroll 40s linear infinite; /* Slow, smooth speed */
+}
+
+.ticker-track span {
+    display: inline-block;
+}
+
+/* Pause on hover for readability */
+.header-ticker:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+@keyframes tickerScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+/* --- Mobile Ticker Adjustments --- */
+@media (max-width: 991px) { /* Tablet/Mobile Breakpoint matching top-bar usually */
+    .top-bar-content {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 15px;
+    }
+    
+    .top-bar-left {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .header-ticker {
+        width: 100%;
+        max-width: 100%; /* Full width */
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+        justify-content: center;
+        height: 25px; /* Compact vertically */
+        font-size: 0.85rem;
+        background: rgba(0,0,0,0.02); /* Very subtle bg on mobile to separate */
+        border-radius: 4px;
+    }
+    
+    .header-ticker {
+        width: 100%;
+        margin: 5px 0 0 0; /* Reset margin */
+        order: 2; /* Ensure it stays in middle/bottom if needed, but flex-direction:column handles it */
+        border: none;
+        background: rgba(0,0,0,0.03); 
+    }
+    
+    .top-bar-right {
+        justify-content: center;
+        margin-top: 5px;
+        padding-left: 0 !important;
+        flex-shrink: 0;
     }
 }
