@@ -2020,11 +2020,6 @@ ul { list-style: none; }
     overflow: hidden;
     /* Increased top padding to accommodate scallop and header */
     padding: 180px 0 140px 0; 
-    /* Dark Overlay for White Text Contrast */
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('assets/image\ copy\ 2.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
     /* Center content by default */
     text-align: center;
     color: #ffffff;
@@ -4061,5 +4056,43 @@ body {
 @media (max-width: 400px) {
     .logo img {
         height: 85px !important; /* Still prominent on small screens */
+    }
+}
+
+/* --- Hero Zoom Animation Support --- */
+
+.creative-hero {
+    position: relative !important;
+    overflow: hidden !important;
+    /* Ensure existing padding/layout works, usually defined elsewhere */
+}
+
+/* The container for the animated background */
+.hero-bg-zoom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    
+    /* Animation */
+    transform: scale(1);
+    animation: heroZoomIn 20s infinite alternate ease-in-out;
+}
+
+/* Ensure content sits on top */
+.creative-hero > .container {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes heroZoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
     }
 }
