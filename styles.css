@@ -4048,3 +4048,18 @@ body {
    The contact form has inline style width:100%, which will override the width but not likely the display properly?
    Actually button width:100% works fine on inline-block.
 */
+
+/* --- Mobile Logo Size Increase --- */
+@media (max-width: 1024px) {
+    .logo img {
+        height: 100px !important; /* Significantly increased size */
+        max-width: 250px; /* Allow plenty of width */
+    }
+}
+
+/* Specific adjustment for very small screens if needed */
+@media (max-width: 400px) {
+    .logo img {
+        height: 85px !important; /* Still prominent on small screens */
+    }
+}
