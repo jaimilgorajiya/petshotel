@@ -3805,3 +3805,56 @@ body {
         display: none !important;
     }
 }
+
+/* --- Mobile Hero Consistency Fix (Except Home) --- */
+@media (max-width: 768px) {
+    /* 
+       Apply standard mobile sizing to all pages using .creative-hero class,
+       which typically includes About, Boarding, Grooming, etc. 
+       EXCEPT we ensure the home page (which often uses .hero-slider) is not affected 
+       by these overrides if it shares classes. 
+       Note: Home uses .hero-slider, interior pages use .creative-hero or .page-hero.
+    */
+    
+    .creative-hero {
+        padding: 120px 20px 80px 20px !important; /* Adjust padding for mobile */
+        min-height: auto !important; /* Remove fixed height constraint */
+    }
+
+    /* Scallop sizing for mobile */
+    .creative-hero::before {
+        height: 25px !important;
+        background-size: 35px 35px !important; /* Smaller scallops */
+    }
+
+    /* Typography Scaling for Mobile Hero */
+    .creative-hero .hero-title-large {
+        font-size: 2rem !important; /* Smaller title */
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .creative-hero .hero-subtext {
+        font-size: 1.1rem !important;
+        line-height: 1.5 !important;
+        max-width: 100% !important;
+        margin-bottom: 25px !important;
+        padding: 0 10px; /* Slight side padding */
+    }
+
+    /* Button and Icon adjustments */
+    .creative-hero .btn-primary {
+        padding: 12px 30px !important;
+        font-size: 1rem !important;
+    }
+
+    .hero-underline {
+        width: 50px !important;
+        height: 50px !important;
+        margin-top: 20px !important;
+    }
+    
+    .hero-underline i {
+        font-size: 1.2rem !important;
+    }
+}
