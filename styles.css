@@ -2020,6 +2020,11 @@ ul { list-style: none; }
     overflow: hidden;
     /* Increased top padding to accommodate scallop and header */
     padding: 180px 0 140px 0; 
+    /* Dark Overlay for White Text Contrast */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('assets/image\ copy\ 2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
     /* Center content by default */
     text-align: center;
     color: #ffffff;
@@ -4047,52 +4052,44 @@ body {
 /* --- Mobile Logo Size Increase --- */
 @media (max-width: 1024px) {
     .logo img {
-        height: 100px !important; /* Significantly increased size */
-        max-width: 250px; /* Allow plenty of width */
+        height: 75px !important; /* Increased from 60px */
+        max-width: 180px; /* Ensure aspect ratio safe */
     }
 }
 
 /* Specific adjustment for very small screens if needed */
 @media (max-width: 400px) {
     .logo img {
-        height: 85px !important; /* Still prominent on small screens */
+        height: 65px !important; /* Slightly smaller for very thin phones but still bigger than before */
     }
 }
 
-/* --- Hero Zoom Animation Support --- */
-
+/* --- FORCE PAW CENTERING IN HERO --- */
 .creative-hero {
     position: relative !important;
-    overflow: hidden !important;
-    /* Ensure existing padding/layout works, usually defined elsewhere */
 }
 
-/* The container for the animated background */
-.hero-bg-zoom {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none;
+.creative-hero .hero-underline {
+    position: absolute !important;
+    /* Fixed 30px from the bottom of the HERO SECTION */
+    bottom: 30px !important; 
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    z-index: 10;
     
-    /* Animation */
-    transform: scale(1);
-    animation: heroZoomIn 20s infinite alternate ease-in-out;
+    /* Restore defined dimensions to prevent collapse */
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
-/* Ensure content sits on top */
-.creative-hero > .container {
-    position: relative;
-    z-index: 2;
-}
-
-@keyframes heroZoomIn {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.15);
-    }
-}
+/* Ensure the hero content doesn't trap the absolute paw if it happened to be inside in some browsers/layouts, 
+   although moving it in HTML is the primary fix. 
+   If it IS inside .hero-content and .hero-content is relative, 
+   we might have issues if .hero-content doesn't span full height.
+   But we are moving it. */
