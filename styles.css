@@ -574,7 +574,8 @@ ul { list-style: none; }
     z-index: -1;
     mix-blend-mode: multiply; 
 }
-.about-section .title-with-paw::before{
+.about-section .title-with-paw::before,
+.section-padding .title-with-paw::before{
        content: "";
     position: absolute;
     top: -20px;
