@@ -4093,3 +4093,74 @@ body {
    If it IS inside .hero-content and .hero-content is relative, 
    we might have issues if .hero-content doesn't span full height.
    But we are moving it. */
+
+/* --- 404 Error Page Styles (Fixed Viewport) --- */
+.error-page-section {
+    /* Calculate height to fill remaining screen minus the header (approx 160px) */
+    height: calc(100vh - 160px); 
+    min-height: auto;
+    padding: 0 20px;
+    background-color: #ffffff; /* pure white value to blend with image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.error-container {
+    max-width: 500px; 
+    width: 100%;
+    margin-top: -60px; /* Pull up slightly more to center visually with image */
+    text-align: center;
+}
+
+.error-image-wrapper {
+    margin-bottom: 0px; /* Reduced space */
+    display: flex;
+    justify-content: center;
+}
+
+.error-dog-img {
+    max-width: 100%;
+    max-height: 40vh; /* Slightly larger dog */
+    width: auto;      
+    object-fit: contain;
+    border-radius: 0; /* Remove potential border radius */
+    box-shadow: none; /* Remove box shadow to eliminate 'box' look */
+}
+
+.error-title {
+    font-size: 2.5rem; /* Restore larger title */
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.error-text {
+    font-size: 1.1rem;
+    color: var(--text-body);
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.error-btn {
+    padding: 12px 35px !important;
+    font-size: 1rem !important;
+    display: inline-block;
+    border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+    .error-page-section {
+        height: auto; 
+        min-height: calc(100vh - 100px); /* Fill screen on mobile too */
+        padding: 40px 20px;
+    }
+    .error-dog-img {
+        max-height: 300px; 
+    }
+    .error-title {
+        font-size: 2rem;
+    }
+}
