@@ -3798,3 +3798,10 @@ body {
         color: var(--brand-red);
     }
 }
+
+/* --- Hide "Why Choose Us" Dog on Mobile --- */
+@media (max-width: 900px) {
+    .why-choose-image-container {
+        display: none !important;
+    }
+}
